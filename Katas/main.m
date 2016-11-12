@@ -7,11 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <stdio.h>
+
+
+void printName(const char *name) {
+
+    printf("%s", name);
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-    }
+
+        printf("%s", @"Hello, World!\n".UTF8String);
+
+        printName("Kellie\n");
+}
+
     return 0;
 }
+

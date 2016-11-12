@@ -3,12 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1EA7879A1DD56D330075EFFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA787991DD56D330075EFFF /* main.m */; };
+		1EA787A51DD579890075EFFF /* KarateChop.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA787A41DD579890075EFFF /* KarateChop.m */; };
+		1EFD9A681DD7A589000EB830 /* KarateChopTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9A671DD7A589000EB830 /* KarateChopTest.m */; };
+		1EFD9A6F1DD7AEAD000EB830 /* BST.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9A6E1DD7AEAD000EB830 /* BST.m */; };
+		1EFD9A711DD7B1AD000EB830 /* BSTTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9A701DD7B1AD000EB830 /* BSTTest.m */; };
+		1EFD9A761DD7B4B0000EB830 /* BST.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9A6E1DD7AEAD000EB830 /* BST.m */; };
+		1EFD9A771DD7B4B8000EB830 /* KarateChop.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA787A41DD579890075EFFF /* KarateChop.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1EFD9A741DD7B46F000EB830 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EA7878E1DD56D330075EFFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EA787951DD56D330075EFFF;
+			remoteInfo = Katas;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1EA787941DD56D330075EFFF /* CopyFiles */ = {
@@ -25,10 +41,25 @@
 /* Begin PBXFileReference section */
 		1EA787961DD56D330075EFFF /* Katas */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Katas; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA787991DD56D330075EFFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1EA787A31DD579890075EFFF /* KarateChop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KarateChop.h; sourceTree = "<group>"; };
+		1EA787A41DD579890075EFFF /* KarateChop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KarateChop.m; sourceTree = "<group>"; };
+		1EFD9A651DD7A589000EB830 /* KatasTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KatasTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EFD9A671DD7A589000EB830 /* KarateChopTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KarateChopTest.m; sourceTree = "<group>"; };
+		1EFD9A691DD7A589000EB830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EFD9A6D1DD7AEAD000EB830 /* BST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BST.h; sourceTree = "<group>"; };
+		1EFD9A6E1DD7AEAD000EB830 /* BST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BST.m; sourceTree = "<group>"; };
+		1EFD9A701DD7B1AD000EB830 /* BSTTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1EA787931DD56D330075EFFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EFD9A621DD7A589000EB830 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				1EA787981DD56D330075EFFF /* Katas */,
+				1EFD9A661DD7A589000EB830 /* KatasTest */,
 				1EA787971DD56D330075EFFF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				1EA787961DD56D330075EFFF /* Katas */,
+				1EFD9A651DD7A589000EB830 /* KatasTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +91,22 @@
 			isa = PBXGroup;
 			children = (
 				1EA787991DD56D330075EFFF /* main.m */,
+				1EFD9A6D1DD7AEAD000EB830 /* BST.h */,
+				1EFD9A6E1DD7AEAD000EB830 /* BST.m */,
+				1EA787A31DD579890075EFFF /* KarateChop.h */,
+				1EA787A41DD579890075EFFF /* KarateChop.m */,
 			);
 			path = Katas;
+			sourceTree = "<group>";
+		};
+		1EFD9A661DD7A589000EB830 /* KatasTest */ = {
+			isa = PBXGroup;
+			children = (
+				1EFD9A701DD7B1AD000EB830 /* BSTTest.m */,
+				1EFD9A671DD7A589000EB830 /* KarateChopTest.m */,
+				1EFD9A691DD7A589000EB830 /* Info.plist */,
+			);
+			path = KatasTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +129,24 @@
 			productReference = 1EA787961DD56D330075EFFF /* Katas */;
 			productType = "com.apple.product-type.tool";
 		};
+		1EFD9A641DD7A589000EB830 /* KatasTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EFD9A6C1DD7A589000EB830 /* Build configuration list for PBXNativeTarget "KatasTest" */;
+			buildPhases = (
+				1EFD9A611DD7A589000EB830 /* Sources */,
+				1EFD9A621DD7A589000EB830 /* Frameworks */,
+				1EFD9A631DD7A589000EB830 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EFD9A751DD7B46F000EB830 /* PBXTargetDependency */,
+			);
+			name = KatasTest;
+			productName = KatasTest;
+			productReference = 1EFD9A651DD7A589000EB830 /* KatasTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,13 +158,16 @@
 				TargetAttributes = {
 					1EA787951DD56D330075EFFF = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = LE3Y88K938;
+						ProvisioningStyle = Automatic;
+					};
+					1EFD9A641DD7A589000EB830 = {
+						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 1EA787911DD56D330075EFFF /* Build configuration list for PBXProject "Katas" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -111,20 +179,52 @@
 			projectRoot = "";
 			targets = (
 				1EA787951DD56D330075EFFF /* Katas */,
+				1EFD9A641DD7A589000EB830 /* KatasTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EFD9A631DD7A589000EB830 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1EA787921DD56D330075EFFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFD9A6F1DD7AEAD000EB830 /* BST.m in Sources */,
 				1EA7879A1DD56D330075EFFF /* main.m in Sources */,
+				1EA787A51DD579890075EFFF /* KarateChop.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EFD9A611DD7A589000EB830 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EFD9A761DD7B4B0000EB830 /* BST.m in Sources */,
+				1EFD9A771DD7B4B8000EB830 /* KarateChop.m in Sources */,
+				1EFD9A681DD7A589000EB830 /* KarateChopTest.m in Sources */,
+				1EFD9A711DD7B1AD000EB830 /* BSTTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1EFD9A751DD7B46F000EB830 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EA787951DD56D330075EFFF /* Katas */;
+			targetProxy = 1EFD9A741DD7B46F000EB830 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1EA7879B1DD56D330075EFFF /* Debug */ = {
@@ -217,7 +317,10 @@
 		1EA7879E1DD56D330075EFFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				DEVELOPMENT_TEAM = LE3Y88K938;
+				INFOPLIST_FILE = "$(SRCROOT)/KatasTest/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.katas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -225,7 +328,34 @@
 		1EA7879F1DD56D330075EFFF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				DEVELOPMENT_TEAM = LE3Y88K938;
+				INFOPLIST_FILE = "$(SRCROOT)/KatasTest/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.katas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1EFD9A6A1DD7A589000EB830 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LE3Y88K938;
+				INFOPLIST_FILE = KatasTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = personal.kds.KatasTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1EFD9A6B1DD7A589000EB830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LE3Y88K938;
+				INFOPLIST_FILE = KatasTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = personal.kds.KatasTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -247,6 +377,15 @@
 			buildConfigurations = (
 				1EA7879E1DD56D330075EFFF /* Debug */,
 				1EA7879F1DD56D330075EFFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EFD9A6C1DD7A589000EB830 /* Build configuration list for PBXNativeTarget "KatasTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EFD9A6A1DD7A589000EB830 /* Debug */,
+				1EFD9A6B1DD7A589000EB830 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
