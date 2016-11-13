@@ -10,7 +10,7 @@
 
 @implementation BST
 
-struct Node* newNode(int data)
+struct Node* newNode(NSInteger data)
 {
     struct Node* node = (struct Node*) malloc(sizeof(struct Node));
     
@@ -22,9 +22,18 @@ struct Node* newNode(int data)
     return node;
 }
 
-struct Node* toBST(int arr[]) {
+struct Node* toBST(NSArray *arr) {
 
-    return nil;
+    if(!arr.count) return nil;
+
+    NSUInteger mid = arr.count/2;
+    int data = [arr[mid] intValue];
+    struct Node *root = newNode(data);
+
+    root->left = toBST([arr subarrayWithRange:NSMakeRange(0, mid)]);
+    root->right = toBST([arr subarrayWithRange:NSMakeRange(mid+1, mid)]);
+
+    return root;
 }
 
 @end

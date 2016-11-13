@@ -11,15 +11,15 @@
 
 struct Node {
 
-    int data;
+    NSInteger data;
     struct Node *parent;
     struct Node *left;
     struct Node *right;
 };
 @interface BST : NSObject
 
-struct Node* newNode(int data);
+struct Node* newNode(NSInteger data);
 
-struct Node* toBST(int arr[]);
+struct Node* toBST(NSArray *arr);
 
 @end

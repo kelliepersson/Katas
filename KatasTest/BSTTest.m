@@ -39,10 +39,10 @@
 
 - (void)testToBST {
 
-    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    NSArray<NSNumber *> *arr = @[@1, @2, @5, @9, @11, @12, @22];
     struct Node *root =  toBST(arr);
 
-    assert(root->data == 4);
+    assert(root->data == 9);
     assert(root->parent == nil);
     assert(root->left != nil);
     assert(root->right != nil);
