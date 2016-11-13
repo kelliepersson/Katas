@@ -32,7 +32,7 @@
     struct Node *node =  newNode(1);
 
     assert(node->data == 1);
-    assert(node->parent == nil);
+    assert(node->index == -1);
     assert(node->left == nil);
     assert(node->right == nil);
 }
@@ -40,12 +40,23 @@
 - (void)testToBST {
 
     NSArray<NSNumber *> *arr = @[@1, @2, @5, @9, @11, @12, @22];
-    struct Node *root =  toBST(arr);
+    struct Node *root =  toBST(arr, 0, (int)arr.count-1);
 
     assert(root->data == 9);
-    assert(root->parent == nil);
-    assert(root->left != nil);
-    assert(root->right != nil);
+    assert(root->index == 3);
+    assert(root->left->data == 2);
+    assert(root->right->data == 12);
+}
+
+- (void)testPreOrder {
+
+    NSArray<NSNumber *> *arr = @[@1, @2, @5, @9, @11, @12, @22];
+    struct Node *root =  toBST(arr, 0, (int)arr.count-1);
+
+    preOrder(root);
+    printf("\n");
+    inOrder(root);
+    printf("\n");
 }
 
 - (void)testPerformanceExample {

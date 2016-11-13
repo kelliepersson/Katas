@@ -8,28 +8,57 @@
 
 #import <XCTest/XCTest.h>
 
-// Collaborators
+// Class under test
 #import "KarateChop.h"
 
-@interface KarateChopTest : XCTestCase
+@interface KarateChopTest : XCTestCase {
+
+    KarateChop *sut;
+}
 
 @end
 
 @implementation KarateChopTest
 
 - (void)setUp {
+    
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+
+    sut = [[KarateChop alloc] init];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+
+    // deallocate
+    sut = nil;
+
     [super tearDown];
 }
 
 - (void)testKarateChop {
 
-    
+    //assert(-1 == chop(3,@[]));
+    //assert(-1 == [sut searchIndex:3 inArray:@[@1]]);
+    //assert(0 == [sut searchIndex:1 inArray:@[@1]]);
+
+
+//    assert_equal(0,  chop(1, [1, 3, 5]))
+//    assert_equal(1,  chop(3, [1, 3, 5]))
+//    assert_equal(2,  chop(5, [1, 3, 5]))
+//    assert_equal(-1, chop(0, [1, 3, 5]))
+//    assert_equal(-1, chop(2, [1, 3, 5]))
+//    assert_equal(-1, chop(4, [1, 3, 5]))
+//    assert_equal(-1, chop(6, [1, 3, 5]))
+//
+//    assert_equal(0,  chop(1, [1, 3, 5, 7]))
+//    assert_equal(1,  chop(3, [1, 3, 5, 7]))
+//    assert_equal(2,  chop(5, [1, 3, 5, 7]))
+//    assert_equal(3,  chop(7, [1, 3, 5, 7]))
+//    assert_equal(-1, chop(0, [1, 3, 5, 7]))
+//    assert_equal(-1, chop(2, [1, 3, 5, 7]))
+//    assert_equal(-1, chop(4, [1, 3, 5, 7]))
+//    assert_equal(-1, chop(6, [1, 3, 5, 7]))
+//    assert_equal(-1, chop(8, [1, 3, 5, 7]))
 }
 
 - (void)testPerformanceExample {

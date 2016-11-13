@@ -10,30 +10,49 @@
 
 @implementation BST
 
-struct Node* newNode(NSInteger data)
+struct Node* newNode(int data)
 {
     struct Node* node = (struct Node*) malloc(sizeof(struct Node));
-    
+
     node->data = data;
-    node->parent = nil;
+    node->index = -1;
     node->left = nil;
     node->right = nil;
 
     return node;
 }
 
-struct Node* toBST(NSArray *arr) {
+struct Node* toBST(NSArray *arr, int start, int end) {
 
-    if(!arr.count) return nil;
+    if(start > end) return nil;
 
-    NSUInteger mid = arr.count/2;
+    int mid = (start + end)/2;
     int data = [arr[mid] intValue];
     struct Node *root = newNode(data);
 
-    root->left = toBST([arr subarrayWithRange:NSMakeRange(0, mid)]);
-    root->right = toBST([arr subarrayWithRange:NSMakeRange(mid+1, mid)]);
+    root->index = (int)mid;
+    root->left = toBST(arr, start, mid-1);
+    root->right = toBST(arr, mid+1, end);
 
     return root;
+}
+
+void preOrder(struct Node* node) {
+
+    if(!node) return;
+
+    printf("%ld,",(long)node->data);
+    preOrder(node->left);
+    preOrder(node->right);
+}
+
+void inOrder(struct Node* node) {
+
+    if(!node) return;
+
+    inOrder(node->left);
+    printf("%ld,",(long)node->data);
+    inOrder(node->right);
 }
 
 @end

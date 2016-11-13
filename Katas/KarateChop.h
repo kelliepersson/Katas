@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <stdio.h>
 
-// Collaborators
-#import "BST.h"
-
+@class BST;
 @interface KarateChop : NSObject
 
--(void)searchIndex:(int)target inArray:(NSArray *)array;
+struct Node* find(int target, struct Node* root);
+
+int chop(int target, struct Node* root);
 
 @end
 
