@@ -13,7 +13,7 @@
 
 @implementation KarateChop
 
-struct Node* find(int target, struct Node* root) {
+struct BNode* find(int target, struct BNode* root) {
 
     if (root == nil || root->data == target)
         return root;
@@ -26,14 +26,14 @@ struct Node* find(int target, struct Node* root) {
     return find(target, (root->left));
 }
 
-int chop(int target, struct Node* root) {
+int chop(int target, NSArray *arr) {
 
-    int index = -1;
+    struct BNode *root =  toBST(arr, 0, (int)arr.count-1);
+    struct BNode* node = find(target,root);
+    
+    if(node) return node->index;
 
-    struct Node* node = find(target,root);
-    if(node) index = node->index;
-
-    return index;
+    return -1;
 }
 
 @end

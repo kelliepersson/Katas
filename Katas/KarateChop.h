@@ -12,9 +12,9 @@
 @class BST;
 @interface KarateChop : NSObject
 
-struct Node* find(int target, struct Node* root);
+struct BNode* find(int target, struct BNode* root);
 
-int chop(int target, struct Node* root);
+int chop(int target, NSArray *arr);
 
 @end
 

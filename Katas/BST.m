@@ -10,9 +10,9 @@
 
 @implementation BST
 
-struct Node* newNode(int data)
+struct BNode* newNode(int data)
 {
-    struct Node* node = (struct Node*) malloc(sizeof(struct Node));
+    struct BNode* node = (struct BNode*) malloc(sizeof(struct BNode));
 
     node->data = data;
     node->index = -1;
@@ -22,13 +22,13 @@ struct Node* newNode(int data)
     return node;
 }
 
-struct Node* toBST(NSArray *arr, int start, int end) {
+struct BNode* toBST(NSArray *arr, int start, int end) {
 
     if(start > end) return nil;
 
     int mid = (start + end)/2;
     int data = [arr[mid] intValue];
-    struct Node *root = newNode(data);
+    struct BNode *root = newNode(data);
 
     root->index = (int)mid;
     root->left = toBST(arr, start, mid-1);
@@ -37,7 +37,7 @@ struct Node* toBST(NSArray *arr, int start, int end) {
     return root;
 }
 
-void preOrder(struct Node* node) {
+void preOrder(struct BNode* node) {
 
     if(!node) return;
 
@@ -46,7 +46,7 @@ void preOrder(struct Node* node) {
     preOrder(node->right);
 }
 
-void inOrder(struct Node* node) {
+void inOrder(struct BNode* node) {
 
     if(!node) return;
 

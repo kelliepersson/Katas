@@ -10,7 +10,6 @@
 #import <stdio.h>
 
 // Collaborators
-#import "BST.h"
 #import "KarateChop.h"
 
 void printName(const char *name) {
@@ -25,9 +24,9 @@ int main(int argc, const char * argv[]) {
         printName("Kellie\n");
 
         NSArray *arr = @[@1, @2, @5, @9, @11, @12, @22];
-        struct Node *root =  toBST(arr, 0, (int)arr.count-1);
-        printf("%i\n", chop(12,root));
-        printf("%i\n", chop(44,root));
+        printf("%i\n", chop(12,arr));
+        printf("%i\n", chop(44,arr));
+        printf("%i\n", chop(1,arr));
     }
     
     return 0;

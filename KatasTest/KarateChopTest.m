@@ -11,9 +11,12 @@
 // Class under test
 #import "KarateChop.h"
 
+// Collaborators
+#import "BST.h"
+
 @interface KarateChopTest : XCTestCase {
 
-    KarateChop *sut;
+   NSArray *arr;
 }
 
 @end
@@ -24,48 +27,67 @@
     
     [super setUp];
 
-    sut = [[KarateChop alloc] init];
+    arr = @[@1, @3, @5, @7];
 }
 
 - (void)tearDown {
 
     // deallocate
-    sut = nil;
+    arr = nil;
 
     [super tearDown];
 }
 
-- (void)testKarateChop {
+- (void)testFind_TargetNotFound {
 
-    //assert(-1 == chop(3,@[]));
-    //assert(-1 == [sut searchIndex:3 inArray:@[@1]]);
-    //assert(0 == [sut searchIndex:1 inArray:@[@1]]);
+    // given
+    struct BNode *root = toBST(arr, 0, (int)arr.count-1);
 
+    // when
+    struct BNode *node = find(4, root);
 
-//    assert_equal(0,  chop(1, [1, 3, 5]))
-//    assert_equal(1,  chop(3, [1, 3, 5]))
-//    assert_equal(2,  chop(5, [1, 3, 5]))
-//    assert_equal(-1, chop(0, [1, 3, 5]))
-//    assert_equal(-1, chop(2, [1, 3, 5]))
-//    assert_equal(-1, chop(4, [1, 3, 5]))
-//    assert_equal(-1, chop(6, [1, 3, 5]))
-//
-//    assert_equal(0,  chop(1, [1, 3, 5, 7]))
-//    assert_equal(1,  chop(3, [1, 3, 5, 7]))
-//    assert_equal(2,  chop(5, [1, 3, 5, 7]))
-//    assert_equal(3,  chop(7, [1, 3, 5, 7]))
-//    assert_equal(-1, chop(0, [1, 3, 5, 7]))
-//    assert_equal(-1, chop(2, [1, 3, 5, 7]))
-//    assert_equal(-1, chop(4, [1, 3, 5, 7]))
-//    assert_equal(-1, chop(6, [1, 3, 5, 7]))
-//    assert_equal(-1, chop(8, [1, 3, 5, 7]))
+    // then
+    assert(node == nil);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testFind_TargetFound {
+
+    // given
+    struct BNode *root = toBST(arr, 0, (int)arr.count-1);
+
+    // when
+    struct BNode *node = find(3, root);
+
+    // then
+    assert(node->data == 3);
+    assert(root->index == 1);
+    assert(root->left->data == 1);
+    assert(root->right->data == 5);
+}
+
+- (void)testChop {
+
+    assert(-1 == chop(3, @[]));;
+    assert(-1 == chop(3, @[@1]));
+    assert(0 == chop(1, @[@1]));
+
+    assert(0 == chop(1, @[@1, @3, @5]));
+    assert(1 == chop(3, @[@1, @3, @5]));
+    assert(2 == chop(5, @[@1, @3, @5]));
+    assert(-1 == chop(0, @[@1, @3, @5]));
+    assert(-1 == chop(2, @[@1, @3, @5]));
+    assert(-1 == chop(4, @[@1, @3, @5]));
+    assert(-1 == chop(6, @[@1, @3, @5]));
+
+    assert(0 == chop(1, @[@1, @3, @5, @7]));
+    assert(1 == chop(3, @[@1, @3, @5, @7]));
+    assert(2 == chop(5, @[@1, @3, @5, @7]));
+    assert(3 == chop(7, @[@1, @3, @5, @7]));
+    assert(-1 == chop(0, @[@1, @3, @5, @7]));
+    assert(-1 == chop(2, @[@1, @3, @5, @7]));
+    assert(-1 == chop(4, @[@1, @3, @5, @7]));
+    assert(-1 == chop(6, @[@1, @3, @5, @7]));
+    assert(-1 == chop(8, @[@1, @3, @5, @7]));
 }
 
 @end

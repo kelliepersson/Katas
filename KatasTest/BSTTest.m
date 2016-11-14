@@ -29,7 +29,7 @@
 
 - (void)testNewNode {
 
-    struct Node *node =  newNode(1);
+    struct BNode *node =  newNode(1);
 
     assert(node->data == 1);
     assert(node->index == -1);
@@ -40,7 +40,7 @@
 - (void)testToBST {
 
     NSArray<NSNumber *> *arr = @[@1, @2, @5, @9, @11, @12, @22];
-    struct Node *root =  toBST(arr, 0, (int)arr.count-1);
+    struct BNode *root =  toBST(arr, 0, (int)arr.count-1);
 
     assert(root->data == 9);
     assert(root->index == 3);
@@ -51,19 +51,12 @@
 - (void)testPreOrder {
 
     NSArray<NSNumber *> *arr = @[@1, @2, @5, @9, @11, @12, @22];
-    struct Node *root =  toBST(arr, 0, (int)arr.count-1);
+    struct BNode *root =  toBST(arr, 0, (int)arr.count-1);
 
     preOrder(root);
     printf("\n");
     inOrder(root);
     printf("\n");
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
 }
 
 @end
