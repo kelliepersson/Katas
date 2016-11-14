@@ -29,7 +29,7 @@
 
 - (void)testNewNode {
 
-    struct BNode *node =  newNode(1);
+    struct BNode *node =  bNode(1);
 
     assert(node->data == 1);
     assert(node->index == -1);

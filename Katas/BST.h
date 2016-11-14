@@ -17,7 +17,7 @@ struct BNode {
 };
 @interface BST : NSObject
 
-struct BNode* newNode(int data);
+struct BNode* bNode(int data);
 struct BNode* toBST(NSArray *arr, int start, int end);
 
 void preOrder(struct BNode* node);
