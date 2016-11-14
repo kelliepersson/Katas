@@ -25,6 +25,9 @@ struct TNode *tNode(char key) {
 
 void insert(struct TNode **root, char *word) {
 
+    // do nothing with empty string
+    if(!(*word)) return;
+
     if(!(*root)) *root = tNode(* word);
 
     if(*word < (*root)->data)

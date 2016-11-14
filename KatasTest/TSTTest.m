@@ -55,10 +55,11 @@
     insert(&root, "cat");
     insert(&root, "cats");
     insert(&root, "catch");
+    insert(&root, "");
+
     // then
     XCTAssertEqual(root->data,'c');
     XCTAssertEqual(root->eos,NO);
-    XCTAssertEqual(root->left, nil);
     XCTAssertEqual(root->right,nil);
 
     XCTAssertEqual(root->equal->data,'a');
