@@ -10,15 +10,15 @@
 
 struct TNode {
 
-    char key;
-    int idx;
+    char data;
+    BOOL eos;  // end of string
     struct TNode *left;
     struct TNode *equal;
     struct TNode *right;
 };
 @interface TST : NSObject
 
-struct TNode *tNode(int key);
-struct TNode *toTST(NSArray *arr, int start, int end);
+struct TNode *tNode(const char key);
+void insert(struct TNode **root, char *word);
 
 @end

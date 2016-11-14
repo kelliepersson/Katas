@@ -12,10 +12,11 @@
 		1EFD9A681DD7A589000EB830 /* KarateChopTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9A671DD7A589000EB830 /* KarateChopTest.m */; };
 		1EFD9A6F1DD7AEAD000EB830 /* BST.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9A6E1DD7AEAD000EB830 /* BST.m */; };
 		1EFD9A711DD7B1AD000EB830 /* BSTTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9A701DD7B1AD000EB830 /* BSTTest.m */; };
-		1EFD9A761DD7B4B0000EB830 /* BST.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9A6E1DD7AEAD000EB830 /* BST.m */; };
-		1EFD9A771DD7B4B8000EB830 /* KarateChop.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA787A41DD579890075EFFF /* KarateChop.m */; };
 		1EFD9A9D1DDA3358000EB830 /* TST.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9A9C1DDA3358000EB830 /* TST.m */; };
 		1EFD9A9F1DDA35A8000EB830 /* TSTTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9A9E1DDA35A8000EB830 /* TSTTest.m */; };
+		1EFD9AA61DDA4BC1000EB830 /* TST.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9A9C1DDA3358000EB830 /* TST.m */; };
+		1EFD9AA71DDA4BC5000EB830 /* KarateChop.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA787A41DD579890075EFFF /* KarateChop.m */; };
+		1EFD9AA81DDA4BC9000EB830 /* BST.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD9A6E1DD7AEAD000EB830 /* BST.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,9 +209,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EFD9A6F1DD7AEAD000EB830 /* BST.m in Sources */,
-				1EA7879A1DD56D330075EFFF /* main.m in Sources */,
 				1EA787A51DD579890075EFFF /* KarateChop.m in Sources */,
 				1EFD9A9D1DDA3358000EB830 /* TST.m in Sources */,
+				1EA7879A1DD56D330075EFFF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,11 +219,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EFD9A9F1DDA35A8000EB830 /* TSTTest.m in Sources */,
-				1EFD9A761DD7B4B0000EB830 /* BST.m in Sources */,
-				1EFD9A771DD7B4B8000EB830 /* KarateChop.m in Sources */,
-				1EFD9A681DD7A589000EB830 /* KarateChopTest.m in Sources */,
 				1EFD9A711DD7B1AD000EB830 /* BSTTest.m in Sources */,
+				1EFD9A681DD7A589000EB830 /* KarateChopTest.m in Sources */,
+				1EFD9A9F1DDA35A8000EB830 /* TSTTest.m in Sources */,
+				1EFD9AA81DDA4BC9000EB830 /* BST.m in Sources */,
+				1EFD9AA71DDA4BC5000EB830 /* KarateChop.m in Sources */,
+				1EFD9AA61DDA4BC1000EB830 /* TST.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

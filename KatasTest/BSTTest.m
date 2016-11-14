@@ -27,14 +27,14 @@
     [super tearDown];
 }
 
-- (void)testNewNode {
+- (void)testBNode {
 
-    struct BNode *node =  bNode(1);
+    struct BNode *bnode =  bNode(1);
 
-    assert(node->data == 1);
-    assert(node->index == -1);
-    assert(node->left == nil);
-    assert(node->right == nil);
+    assert(bnode->data == 1);
+    assert(bnode->index == -1);
+    assert(bnode->left == nil);
+    assert(bnode->right == nil);
 }
 
 - (void)testToBST {
